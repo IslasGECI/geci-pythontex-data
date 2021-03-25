@@ -1,5 +1,6 @@
 import json
 
+
 class Writer_Metadata:
     def load_metadata(self, path):
         with open(path, encoding="utf8") as info_file:
