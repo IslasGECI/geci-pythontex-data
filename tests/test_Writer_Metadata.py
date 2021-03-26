@@ -12,3 +12,9 @@ def test_buildes():
         assert description == "hola"
         link = writer.write_title_with_link()
         assert link == "\href{Drive}{Titulo}"
+
+def test_load_metadata():
+    writer = gpd.Writer_Metadata()
+    writer.load_metadata("tests/data/diccionario.json")
+    institution = writer.information["institution"]
+    assert institution == "Grupo de Ecología y Conservación de Islas"
