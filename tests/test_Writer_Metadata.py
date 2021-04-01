@@ -13,8 +13,7 @@ def test_buildes(mocker):
     assert link == "\href{Drive}{Titulo}"
 
 
-def test_load_metadata():
-    writer = gpd.Writer_Metadata()
-    writer.load_metadata("tests/data/diccionario.json")
-    institution = writer.information["institution"]
+def test_load_datapackage():
+    dictionary = gpd.load_datapackage("tests/data/diccionario.json")
+    institution = dictionary["institution"]
     assert institution == "Grupo de Ecología y Conservación de Islas"
