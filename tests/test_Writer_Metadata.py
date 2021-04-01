@@ -6,7 +6,7 @@ dictionary = {"resources": [{"description": "hola", "titulo": "Titulo", "drive":
 def test_buildes(mocker):
     mocker.patch("geci_pythontex_data.writer_metadata.load_datapackage", return_value=dictionary)
     writer = gpd.Writer_Metadata()
-    assert writer._information == None
+    assert writer._information is None
     writer.load_metadata("diccionario.json")
     description = writer.description()
     assert description == "hola"
