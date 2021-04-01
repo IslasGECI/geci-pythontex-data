@@ -3,25 +3,25 @@ import json
 
 class Writer_Metadata:
     def __init__(self):
-        self.__information = None
+        self._information = None
 
     def load_metadata(self, path):
-        self.__information = load_datapackage(path)
+        self._information = load_datapackage(path)
 
     @property
     def titulo(self):
-        return self.__information["resources"][0]["titulo"]
+        return self._information["resources"][0]["titulo"]
 
     @property
     def link_to_drive(self):
-        return self.__information["resources"][0]["drive"]
+        return self._information["resources"][0]["drive"]
 
     def write_title_with_link(self):
         title_with_link = f"\href{ {self.link_to_drive} }{ {self.titulo} }".replace("'", "")
         return title_with_link
 
     def description(self):
-        return self.__information["resources"][0]["description"]
+        return self._information["resources"][0]["description"]
 
 
 def load_datapackage(path):
