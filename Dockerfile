@@ -9,4 +9,5 @@ RUN pip install \
     pylint \
     pytest \
     pytest-cov \
-    pytest-mock
+    pytest-mock \
+    rope
