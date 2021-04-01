@@ -3,7 +3,7 @@ import json
 
 class Writer_Metadata:
     def load_metadata(self, path):
-        self.information = self._load_datapackage(path)
+        self.information = _load_datapackage(path)
 
     def titulo(self):
         return self.information["resources"][0]["titulo"]
@@ -18,7 +18,8 @@ class Writer_Metadata:
     def description(self):
         return self.information["resources"][0]["description"]
 
-    def _load_datapackage(self, path):
-        with open(path, encoding="utf8") as info_file:
-            information = json.load(info_file)
-        return information
+
+def _load_datapackage(path):
+    with open(path, encoding="utf8") as info_file:
+        information = json.load(info_file)
+    return information

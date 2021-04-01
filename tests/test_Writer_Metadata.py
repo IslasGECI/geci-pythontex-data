@@ -4,13 +4,13 @@ dictionary = {"resources": [{"description": "hola", "titulo": "Titulo", "drive":
 
 
 def test_buildes(mocker):
-    with mocker.patch.object(gpd.Writer_Metadata, "_load_datapackage", return_value=dictionary):
-        writer = gpd.Writer_Metadata()
-        writer.load_metadata("diccionario.json")
-        description = writer.description()
-        assert description == "hola"
-        link = writer.write_title_with_link()
-        assert link == "\href{Drive}{Titulo}"
+    mocker.patch("geci_pythontex_data.writer_metadata._load_datapackage", return_value=dictionary)
+    writer = gpd.Writer_Metadata()
+    writer.load_metadata("diccionario.json")
+    description = writer.description()
+    assert description == "hola"
+    link = writer.write_title_with_link()
+    assert link == "\href{Drive}{Titulo}"
 
 
 def test_load_metadata():
