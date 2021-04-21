@@ -1,11 +1,11 @@
-import geci_pythontex_data as gpd
+import pythontex_tools as ptt
 
 dictionary = {"resources": [{"description": "hola", "titulo": "Titulo", "drive": "Drive"}]}
 
 
 def test_buildes(mocker):
-    mocker.patch("geci_pythontex_data.writer_metadata.load_datapackage", return_value=dictionary)
-    writer = gpd.Writer_Metadata()
+    mocker.patch("pythontex_tools.writer_metadata.load_datapackage", return_value=dictionary)
+    writer = ptt.Writer_Metadata()
     assert writer._information is None
     writer.load_metadata("diccionario.json")
     description = writer.description()
@@ -15,6 +15,6 @@ def test_buildes(mocker):
 
 
 def test_load_datapackage():
-    dictionary = gpd.load_datapackage("tests/data/diccionario.json")
+    dictionary = ptt.load_datapackage("tests/data/diccionario.json")
     institution = dictionary["institution"]
     assert institution == "Grupo de Ecología y Conservación de Islas"

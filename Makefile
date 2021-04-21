@@ -2,7 +2,7 @@ all: mutants
 
 .PHONY: all check clean coverage format install lint mutants tests
 
-module = geci_pythontex_data
+module = pythontex_tools
 codecov_token = f82b73d5-929e-46ec-96b0-6a7ddb405718
 
 define lint

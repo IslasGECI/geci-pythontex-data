@@ -1,3 +1,3 @@
-# GECI Pythontex Data (GPD)
+# Pythontex Tools
 
-GDP is a module to write the description of our data.
+Pythontex Tools is a module to write the description of our data.

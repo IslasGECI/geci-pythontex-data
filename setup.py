@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="geci_pythontex_data",
+    name="pythontex_tools",
     version="0.1.0",
-    packages=["geci_pythontex_data"],
-    author="Nepo Rojas",
+    packages=["pythontex_tools"],
+    author="Ciencia de Datos • GECI",
     python_requires='>=3.6'
 )
