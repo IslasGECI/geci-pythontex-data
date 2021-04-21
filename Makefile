@@ -1,6 +1,15 @@
 all: mutants
 
-.PHONY: all check clean coverage format install lint mutants tests
+.PHONY: \
+		all \
+		check \
+		clean \
+		coverage \
+		format \
+		install \
+		linter \
+		mutants \
+		tests
 
 module = pythontex_tools
 codecov_token = f82b73d5-929e-46ec-96b0-6a7ddb405718
