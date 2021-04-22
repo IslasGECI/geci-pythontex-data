@@ -7,6 +7,7 @@ With Pythontex Tools we can write titles, links and descriptions from our data d
 ## Ejemplo de uso
 Para usar este módulo debemos importarlo al archivo de latex en el que estemos trabajando nuestro reporte.
 
+```
 \begin{pycode}
 
 import pythontex_tools as ptt
@@ -18,3 +19,4 @@ metadata_writer = ptt.Writer_Metadata()
 metadata_writer.load_metadata(search_nests_datapackage)
 
 \end{pycode}
+```
