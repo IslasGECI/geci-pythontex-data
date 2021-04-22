@@ -7,7 +7,7 @@ def test_buildes(mocker):
     mocker.patch("pythontex_tools.writer_metadata.load_datapackage", return_value=dictionary)
     writer = ptt.Writer_Metadata()
     assert writer._information is None
-    writer.load_metadata("diccionario.json")
+    writer.load_metadata("example_dictionary.json")
     description = writer.description()
     assert description == "hola"
     link = writer.write_title_with_link()
@@ -15,6 +15,6 @@ def test_buildes(mocker):
 
 
 def test_load_datapackage():
-    dictionary = ptt.load_datapackage("tests/data/diccionario.json")
+    dictionary = ptt.load_datapackage("tests/data/example_dictionary.json")
     institution = dictionary["institution"]
     assert institution == "Grupo de Ecología y Conservación de Islas"
