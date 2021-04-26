@@ -5,5 +5,5 @@ setup(
     version="0.1.0",
     packages=["pythontex_tools"],
     author="Ciencia de Datos • GECI",
-    python_requires='>=3.9'
+    python_requires='>=3.8'
 )
