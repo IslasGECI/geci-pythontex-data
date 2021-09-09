@@ -1,7 +1,8 @@
 import json
 
+
 class Writer_Metadata:
-    def __init__(self,level=0):
+    def __init__(self, level=0):
         self._information = None
         self.level = level
 
