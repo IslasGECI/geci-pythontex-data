@@ -69,15 +69,15 @@ metadata_table_2.load_metadata(search_nests_datapackage)
 \end{pycode}
 ```
 
-Note: The resource index starts at 0.
+_Note: The resource index starts at 0._
 
-### Example of how to get the metadata of a resource
+### Example of how to get the metadata from a resource
 
 To write the title of the database with the link to Google Drive:
 ```latex
-\py{metadata_table_1.write_title_with_link()}. \\
+\py{metadata_table_1.write_title_with_link()}.
 ```
 To write the description of the database:
 ```latex
-\py{metadata_table_1.description()}. \\
+\py{metadata_table_1.description()}.
 ```
