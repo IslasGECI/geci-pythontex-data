@@ -1,4 +1,7 @@
+<img src="https://www.islas.org.mx/img/logo.svg" align="right" width="256" />
+
 # Pythontex Tools
+
 [![Tests](https://github.com/IslasGECI/pythontex_tools/actions/workflows/actions.yml/badge.svg)](https://github.com/IslasGECI/pythontex_tools/actions/workflows/actions.yml)
 
 Pythontex Tools is a module to facilitate the interaction between python and latex.
